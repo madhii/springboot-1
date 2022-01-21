@@ -1,1 +1,2 @@
-# sample-springboot-project Master branch
+# sample-springboot-project Main branch
+
