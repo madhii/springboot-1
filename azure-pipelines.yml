@@ -25,4 +25,5 @@ steps:
     SourceFolder: '$(build.artifactstagingdirectory)'
     Contents: '*.jar'
     TargetFolder: '$(build.artifactstagingdirectory)'
+    CleanTargetFolder: true
 
