@@ -4,8 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
-
+ branches:
+   include:
+      - checkazure
+pr:
+   branches:
+    include:
+     - checkazure
 pool:
   vmImage: ubuntu-latest
 
@@ -30,3 +35,20 @@ stages:
                 sonarQubeRunAnalysis: false
                 pmdRunAnalysis: true
                 findBugsRunAnalysis: true
+  - stage: 'Artifacts run'
+    displayName: 'build Art'
+    jobs:
+     - job: 'Buildaftyyhsvdf'
+       displayName: 'build arttt'
+       steps: 
+        - task: Maven@3
+          inputs:
+            mavenPomFile: 'pom.xml'
+            goals: 'clean package'
+            publishJUnitResults: true
+            testResultsFiles: '**/surefire-reports/TEST-*.xml'
+            javaHomeOption: 'JDKVersion'
+            mavenVersionOption: 'Default'
+            mavenAuthenticateFeed: false
+            effectivePomSkip: false
+            sonarQubeRunAnalysis: false
