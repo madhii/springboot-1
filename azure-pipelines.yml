@@ -37,4 +37,5 @@ steps:
         PathtoPublish: 'check'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+- task: PublishBuildArtifacts@1
 
