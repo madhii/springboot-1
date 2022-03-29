@@ -25,7 +25,10 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
-    publishLocation: 'Container'
+    publishLocation: 'FilePath'
+    TargetPath: '\\my\share\(Build.DefinitionName)\\(Build.BuildNumber).'
+    Parallel: true
+    ParallelCount: 1
 
 
 - task: DownloadBuildArtifacts@0
