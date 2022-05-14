@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>sonarSampleDemo</artifactId>
 	<!-- version>0.0.1-SNAPSHOT</version-->
-	<version>${BUILD_NUMBER}</version>
+	<version>latest</version>
 	<packaging>war</packaging>
 	<name>sonarSampleDemo</name>
 	<description>Demo project for Spring Boot</description>
